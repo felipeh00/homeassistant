@@ -1,2 +1,2 @@
-# homeassistant
+# Homea assistant
 Project of university 
