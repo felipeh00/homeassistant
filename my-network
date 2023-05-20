@@ -1,11 +1,11 @@
 [connection]
 id=my-network
-uuid=cb45748a-40f5-4d5b-b1c0-13e258d8a1d4
+uuid=UUID PERSONAL 
 type=802-11-wireless
  
 [802-11-wireless]
 mode=infrastructure
-ssid=felipon
+ssid=NOMBRE DE LA RED
 # Uncomment below if your SSID is not broadcasted
 #hidden=true
  
@@ -13,7 +13,7 @@ ssid=felipon
 [802-11-wireless-security]
 auth-alg=open
 key-mgmt=wpa-psk
-psk=felipon1234
+psk=CONTRASEÑA DE LA RED
  
 [ipv4]
 method=auto
