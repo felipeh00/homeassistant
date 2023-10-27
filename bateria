@@ -1,0 +1,51 @@
+esphome:
+  name: paneldc
+  friendly_name: paneldc
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "Tob47BG7oI9IHSrErQdlnMdg9yNpw/KDqX78d2L3MW4="
+
+ota:
+  password: "ace249feec78d278cca89a3b9853601b"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Paneldc Fallback Hotspot"
+    password: "rkP5VdskRhXs"
+
+captive_portal:
+
+
+
+# Example configuration entry
+uart:
+  tx_pin: GPIO3
+  rx_pin: GPIO1
+  baud_rate: 9600
+  stop_bits: 2
+
+sensor:
+  - platform: pzemdc
+    current:
+      name: "PZEM-003 Current"
+    voltage:
+      name: "PZEM-003 Voltage"
+    power:
+      name: "PZEM-003 Power"
+    energy:
+      name: "PZEM-003 Energy"
+    update_interval: 5s
