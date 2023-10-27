@@ -1,0 +1,9 @@
+- alias: Valores de consumo a fichero
+  initial_state: true
+  trigger:
+    - platform: time_pattern
+      seconds: '/2'
+  action:
+    - service: notify.lecturashistorial
+      data_template: 
+        message: '{{now().strftime("%d/%m/%Y %H:%M:%S")}}; {{ states.sensor.pzeminversor_pzem_004t_v3_power.state }}; {{ states.sensor.pzeminversor_pzem_004t_v3_voltage.state }}; {{ states.sensor.pzeminversor_pzem_004t_v3_current.state }}; {{ states.sensor.pzeminversor_pzem_004t_v3_power_factor.state }}; {{ states.sensor.paneldc_pzem_003_power.state }}; {{ states.sensor.paneldc_pzem_003_voltage.state }}; {{ states.sensor.paneldc_pzem_003_current.state }}'
