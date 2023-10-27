@@ -1,0 +1,3 @@
+- platform: file
+  name: lecturashistorial
+  filename: /config/historialv1/lecturastesteo.csv
